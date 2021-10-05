@@ -5,26 +5,56 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+      .form-group{
+          text-align: center;
+          margin-left: 20%;
+          margin-right: 20%;
+          margin-top: 2em;
+          margin-bottom: 1em;
+      }
+      .form-group > label{
+          font-size: 1.5em;
+          font-size: bolder;
+          font-style: italic;
+          font-weight: bold;
+      }
+      .gomb{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+      }
+      td, th{
+        text-align: center;
+        vertical-align: center;
+      }
+  </style>
 </head>
 <body>
     <div class="container">
-        <h1>Add meg a film nevét</h1>
-        <input type="text" id="nev">
-        <div id="nevError"></div>
-
-        <h1>Add meg a film rendezőjének a nevét</h1>
-        <input type="text" id="rendezo">
-        <div id="rendezoError"></div>
-
-        <h1>Add meg a film kiadási évét</h1>
-        <input type="number" id="kiadasiEv">
-        <div id="kiadasiEvError"></div>
-
-        
-        <button id="kuld">Küldés</button><br>
+            <div class="form-group">
+                <label for="nev" class="text-primary">Add meg a film nevét</label>
+                <input type="text" class="form-control text-center" id="nev">
+                <small id="nevError" class="form-text text-danger"></small>
+            </div>
+            <div class="form-group">
+                <label for="rendezo" class="text-primary">Add meg a film rendezőjének a nevét</label>
+                <input type="text" class="form-control text-center" id="rendezo">
+                <small id="rendezoError" class="form-text text-danger"></small>
+            </div>
+            <div class="form-group">
+                <label for="kiadasiEv" class="text-primary">Add meg a film kiadási évét</label>
+                <input type="number" class="form-control text-center" id="kiadasiEv">
+                <small id="kiadasiEvError" class="form-text text-danger"></small>
+            </div>
+                
+            <div class="gomb">
+                <button id="kuld" class="btn btn-primary">Küldés</button>
+            </div>
+        <div id="tablazat"></div>
     </div>
-
-    <div id="tablazat"></div>
     <script src="main.js"></script>
 </body>
 </html>
