@@ -9,7 +9,7 @@ class Film {
     }
 }
 const filmek = [];
-let obj1 = new Film("aztakurva","kurvaannya","2000");
+let obj1 = new Film("Harry Potter","J. K. Rowling","1997");
 filmek.push(obj1);
 
 console.log(filmek[0].nev);
@@ -46,9 +46,13 @@ function felvesz(){
     if(!hiba){
         let obj = new Film(nev,rendezo,kiadasiev);
         filmek.push(obj);
+        document.getElementById("nev").value="";
+        document.getElementById("rendezo").value="";
+        document.getElementById("kiadasiEv").value="";
     }
     
 }
+
 
 
 document.getElementById("kuld").addEventListener("click", felvesz);
